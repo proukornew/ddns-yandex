@@ -95,7 +95,7 @@ fi
 
 if [ "x$use_https" = "x1" ]
 then
-	retrieve_prog="/usr/bin/curl "
+	retrieve_prog="/usr/bin/curl -k "
 	if [ -f "$cacert" ]
 	then
 		retrieve_prog="${retrieve_prog}--cacert $cacert "
@@ -104,7 +104,7 @@ then
 		retrieve_prog="${retrieve_prog}--capath $cacert "
 	fi
 else
-	retrieve_prog="/usr/bin/wget -O - ";
+	retrieve_prog="/usr/bin/wget --no-check-certificate -O - ";
 fi
 
 service_file="/usr/lib/ddns/services"
