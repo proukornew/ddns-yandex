@@ -1,0 +1,1 @@
+"yandex dns"		"https://pddimp.yandex.ru/nsapi/edit_a_record.xml?token=[PASSWORD]&hostname=[DOMAIN]&record_id=[USERNAME]&content=[IP]"
